@@ -31,7 +31,7 @@ public class MyRouter extends RouteBuilder{
                     }
                 })
                 .unmarshal()
-                .bindy(BindyType.Csv, com.emrekoca.camel.domain.User.class)
+                .bindy(BindyType.Csv, com.emrekoca.camel.domain.BackUser_back.class)
                 .bean(new MyCsvBeanHandler(), "doHandleCsv(*)");
     	}catch(Exception ex){
     		logger.error(ex.getMessage());
